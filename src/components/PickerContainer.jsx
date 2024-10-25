@@ -46,12 +46,12 @@ export class PickerContainer extends Component {
     };
 
     setPickerValue = (value, key) => {
-        const { attributeAssociation } = this.props;
+        const { attributeAssociation, itemsDatasource } = this.props;
+        this.setState({ pickerValue: { [key]: value.group } });
 
-        const selectedItem = this.items.find(item => item.id === value.group);
+        const selectedItem = itemsDatasource.items.find(mxObject => mxObject.id === value.group);
         if (selectedItem) {
-            this.setState({ pickerValue: { [key]: value.group } });
-            //attributeAssociation.setValue(selectedItem.id);
+            attributeAssociation.setValue(selectedItem);
         }
     };
 
