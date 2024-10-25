@@ -1,6 +1,6 @@
 import { Component, createElement } from "react";
 
-import { PickerContainer } from "./components/Picker";
+import { PickerContainer } from "./components/PickerContainer";
 import "./ui/MobilePicker.css";
 
 export class MobilePicker extends Component {
@@ -8,9 +8,8 @@ export class MobilePicker extends Component {
         return (
             <PickerContainer
                 attributeAssociation={this.props.attributeAssociation}
-                dataSource={this.props.dataSource}
-                content={this.props.content}
-                onChangeAction={this.props.onChangeAction}
+                itemsDatasource={this.props.itemsDatasource}
+                itemContent={this.props.itemContent}
             />
         );
     }

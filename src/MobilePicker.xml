@@ -8,18 +8,18 @@
     <properties>
         <propertyGroup caption="Configuration">
             <propertyGroup caption="Attribute">
-                <property key="attributeAssociation" type="association" selectableObjects="dataSource" required="true" onChange="onChangeAction">
+                <property key="attributeAssociation" type="association" selectableObjects="itemsDatasource" required="true" onChange="onChangeAction">
                     <caption>Association</caption>
                     <description/>
                     <associationTypes>
                         <associationType name="Reference" />
                     </associationTypes>
                 </property>
-                <property key="dataSource" type="datasource" isList="true" required="true">
+                <property key="itemsDatasource" type="datasource" isList="true" required="true">
                     <caption>Selectable objects</caption>
                     <description />
                 </property>
-                <property key="content" type="widgets" required="true" dataSource="dataSource">
+                <property key="itemContent" type="widgets" required="true" dataSource="itemsDatasource">
                     <caption>Content to show in the picker</caption>
                     <description/>
                 </property>
