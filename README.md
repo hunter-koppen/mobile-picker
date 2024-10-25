@@ -1,24 +1,21 @@
-## MobilePicker
-[My widget description]
+## Mobile Picker
+
+Mobile Picker is a customizable component designed for web, allowing users to select options in a user-friendly, native-mobile-like interface. It presents choices in a scrollable format, making it easy to navigate through multiple options.
 
 ## Features
-[feature highlights]
+
+- **iOS-style Interface**: Mimics the look and feel of native iOS pickers.
+- **Controlled Content**: Define how each item looks and behaves, allowing for a tailored user experience.
 
 ## Usage
-[step by step instructions]
 
-## Demo project
-[link to sandbox]
+The widget requires an association and a list of items. When an item is selected in the Picker, it will set the association.
 
-## Issues, suggestions and feature requests
-[link to GitHub issues]
+1. Add the widget to the page.
+2. Select an association to be set when an item is chosen.
+3. Set the selectable objects that will populate the Picker.
+4. Define the content for each item; a simple text field works well.
 
-## Development and contribution
+## Issues, Suggestions, and Feature Requests
 
-1. Install NPM package dependencies by using: `npm install`. If you use NPM v7.x.x, which can be checked by executing `npm -v`, execute: `npm install --legacy-peer-deps`.
-1. Run `npm start` to watch for code changes. On every change:
-    - the widget will be bundled;
-    - the bundle will be included in a `dist` folder in the root directory of the project;
-    - the bundle will be included in the `deployment` and `widgets` folder of the Mendix test project.
-
-[specify contribution]
+For any issues, suggestions, or feature requests, please visit our [GitHub issues page](https://github.com/hunter-koppen/mobile-picker).

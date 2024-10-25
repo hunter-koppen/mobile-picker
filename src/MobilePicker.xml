@@ -4,7 +4,6 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Mobile Picker</name>
     <description/>
-    <icon/>
     <properties>
         <propertyGroup caption="Configuration">
             <propertyGroup caption="Attribute">
@@ -28,6 +27,16 @@
                 <property key="onChangeAction" type="action" required="false">
                     <caption>On change</caption>
                     <description></description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Settings">
+                <property key="height" type="integer" defaultValue="216">
+                    <caption>Height</caption>
+                    <description>Height of the picker in px</description>
+                </property>
+                <property key="itemHeight" type="integer" defaultValue="36">
+                    <caption>Item Height</caption>
+                    <description>Height of each item in px</description>
                 </property>
             </propertyGroup>
             <propertyGroup caption="Conditional visibility">

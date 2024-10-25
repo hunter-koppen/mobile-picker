@@ -56,14 +56,26 @@ export class PickerContainer extends Component {
     };
 
     render() {
+        const { height, itemHeight } = this.props;
         const { pickerValue } = this.state;
 
         return (
-            <Picker value={pickerValue} onChange={this.setPickerValue}>
+            <Picker
+                value={pickerValue}
+                onChange={this.setPickerValue}
+                height={height}
+                itemHeight={itemHeight}
+                wheelMode={"normal"}
+                className="mobile-picker"
+            >
                 <Picker.Column name="group">
                     {this.items.map(item => (
-                        <Picker.Item key={item.id} value={item.id}>
-                            {({ selected }) => <div className={selected ? "selected" : ""}>{item.content}</div>}
+                        <Picker.Item
+                            key={item.id}
+                            value={item.id}
+                            className={`picker-item ${pickerValue.group === item.id ? "selected" : ""}`}
+                        >
+                            {item.content}
                         </Picker.Item>
                     ))}
                 </Picker.Column>

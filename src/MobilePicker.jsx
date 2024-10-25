@@ -1,7 +1,6 @@
 import { Component, createElement } from "react";
 
 import { PickerContainer } from "./components/PickerContainer";
-import "./ui/MobilePicker.css";
 
 export class MobilePicker extends Component {
     render() {
@@ -10,6 +9,8 @@ export class MobilePicker extends Component {
                 attributeAssociation={this.props.attributeAssociation}
                 itemsDatasource={this.props.itemsDatasource}
                 itemContent={this.props.itemContent}
+                height={this.props.height}
+                itemHeight={this.props.itemHeight}
             />
         );
     }
