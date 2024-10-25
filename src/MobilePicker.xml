@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget id="kobeon.mobilepicker.MobilePicker" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
-        supportedPlatform="Web"
-        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+<widget id="kobeon.mobilepicker.MobilePicker" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Mobile Picker</name>
-    <description>My widget description</description>
+    <description/>
     <icon/>
     <properties>
-        <propertyGroup caption="General">
-            <property key="sampleText" type="string" required="false">
-                <caption>Default value</caption>
-                <description>Sample text input</description>
-            </property>
+        <propertyGroup caption="Configuration">
+            <propertyGroup caption="Attribute">
+                <property key="attributeAssociation" type="association" selectableObjects="dataSource" required="true" onChange="onChangeAction">
+                    <caption>Association</caption>
+                    <description/>
+                    <associationTypes>
+                        <associationType name="Reference" />
+                    </associationTypes>
+                </property>
+                <property key="dataSource" type="datasource" isList="true" required="true">
+                    <caption>Selectable objects</caption>
+                    <description />
+                </property>
+                <property key="content" type="widgets" required="true" dataSource="dataSource">
+                    <caption>Content to show in the picker</caption>
+                    <description/>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Events">
+                <property key="onChangeAction" type="action" required="false">
+                    <caption>On change</caption>
+                    <description></description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Conditional visibility">
+                <systemProperty key="Visibility" />
+            </propertyGroup>
         </propertyGroup>
     </properties>
 </widget>

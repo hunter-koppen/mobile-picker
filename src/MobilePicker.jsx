@@ -1,10 +1,17 @@
 import { Component, createElement } from "react";
 
-import { HelloWorldSample } from "./components/HelloWorldSample";
+import { PickerContainer } from "./components/Picker";
 import "./ui/MobilePicker.css";
 
 export class MobilePicker extends Component {
     render() {
-        return <HelloWorldSample sampleText={this.props.sampleText} />;
+        return (
+            <PickerContainer
+                attributeAssociation={this.props.attributeAssociation}
+                dataSource={this.props.dataSource}
+                content={this.props.content}
+                onChangeAction={this.props.onChangeAction}
+            />
+        );
     }
 }
