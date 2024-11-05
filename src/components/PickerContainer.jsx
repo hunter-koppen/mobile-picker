@@ -67,6 +67,7 @@ export class PickerContainer extends Component {
                 itemHeight={itemHeight}
                 wheelMode={"normal"}
                 className="mobile-picker"
+                onWheel={event => event.stopPropagation()}
             >
                 <Picker.Column name="group">
                     {this.items.map(item => (

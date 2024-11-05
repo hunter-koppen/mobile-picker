@@ -1,8 +1,8 @@
 {
   "name": "mobilepicker",
   "widgetName": "MobilePicker",
-  "version": "1.0.0",
-  "description": "My widget description",
+  "version": "1.0.1",
+  "description": "",
   "copyright": "Kobeon B.V. 2024",
   "author": "Hunter Koppen",
   "engines": {
