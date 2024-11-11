@@ -12,7 +12,10 @@ export class PickerContainer extends Component {
 
     componentDidUpdate(prevProps) {
         const { itemsDatasource, attributeAssociation } = this.props;
-        if (prevProps.itemsDatasource?.status === "loading" && itemsDatasource?.status === "available") {
+        if (
+            (prevProps.itemsDatasource?.status === "loading" && itemsDatasource?.status === "available") ||
+            (prevProps.itemsDatasource !== itemsDatasource && itemsDatasource?.status === "available")
+        ) {
             this.generateItems();
         }
         if (attributeAssociation.value && attributeAssociation.value.id !== this.state.pickerValue.group) {
